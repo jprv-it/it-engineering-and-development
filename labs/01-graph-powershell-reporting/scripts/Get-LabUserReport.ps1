@@ -35,7 +35,7 @@
 param (
     [Parameter(Mandatory = $true)]
     [ValidatePattern(
-    '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+        '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
     )]
     [string]$TenantId,
 
@@ -68,14 +68,17 @@ try {
     foreach ($moduleName in $requiredModules) {
 
         if (-not (Get-Module -ListAvailable -Name $moduleName)) {
-            throw @"
-        Required PowerShell module '$moduleName' is not installed.
-        
-        Install the required Microsoft Graph PowerShell modules with:
-        
-        Install-Module Microsoft.Graph.Authentication -Scope CurrentUser -Repository PSGallery
-        Install-Module Microsoft.Graph.Users -Scope CurrentUser -Repository PSGallery
-        "@
+
+            throw (
+                @(
+                    "Required PowerShell module '$moduleName' is not installed."
+                    ''
+                    'Install the required Microsoft Graph PowerShell modules with:'
+                    ''
+                    'Install-Module Microsoft.Graph.Authentication -Scope CurrentUser -Repository PSGallery'
+                    'Install-Module Microsoft.Graph.Users -Scope CurrentUser -Repository PSGallery'
+                ) -join [Environment]::NewLine
+            )
         }
     }
 
@@ -100,7 +103,8 @@ try {
         -Scopes $requiredScopes `
         -ContextScope Process `
         -UseDeviceCode `
-        -NoWelcome
+        -NoWelcome `
+        -ErrorAction Stop
 
     $graphConnected = $true
 
@@ -111,12 +115,15 @@ try {
     }
 
     if ($context.TenantId -ne $TenantId) {
-        throw @"
-Connected tenant does not match the tenant supplied to the script.
 
-Requested tenant: $TenantId
-Connected tenant: $($context.TenantId)
-"@
+        throw (
+            @(
+                'Connected tenant does not match the tenant supplied to the script.'
+                ''
+                "Requested tenant: $TenantId"
+                "Connected tenant: $($context.TenantId)"
+            ) -join [Environment]::NewLine
+        )
     }
 
     $missingScopes = @(
@@ -152,60 +159,62 @@ Connected tenant: $($context.TenantId)
 
     $generatedUtc = [DateTime]::UtcNow
 
-    $report = foreach ($user in $users) {
+    $report = @(
+        foreach ($user in $users) {
 
-        Write-Verbose "Processing user: $($user.UserPrincipalName)"
+            Write-Verbose "Processing user: $($user.UserPrincipalName)"
 
-        $groupNames = @()
-        $membershipQueryStatus = 'OK'
+            $groupNames = @()
+            $membershipQueryStatus = 'OK'
 
-        try {
+            try {
 
-            $groups = @(
-                Get-MgUserMemberOfAsGroup `
-                    -UserId $user.Id `
-                    -All `
-                    -Property @(
-                        'Id',
-                        'DisplayName'
-                    ) `
-                    -ErrorAction Stop
-            )
+                $groups = @(
+                    Get-MgUserMemberOfAsGroup `
+                        -UserId $user.Id `
+                        -All `
+                        -Property @(
+                            'Id',
+                            'DisplayName'
+                        ) `
+                        -ErrorAction Stop
+                )
 
-            $groupNames = @(
-                $groups |
-                    Where-Object {
-                        -not [string]::IsNullOrWhiteSpace(
-                            $_.DisplayName
-                        )
-                    } |
-                    Sort-Object DisplayName |
-                    Select-Object -ExpandProperty DisplayName
-            )
+                $groupNames = @(
+                    $groups |
+                        Where-Object {
+                            -not [string]::IsNullOrWhiteSpace(
+                                $_.DisplayName
+                            )
+                        } |
+                        Sort-Object DisplayName |
+                        Select-Object -ExpandProperty DisplayName
+                )
+            }
+            catch {
+
+                $membershipQueryStatus = 'ERROR'
+
+                Write-Warning (
+                    "Unable to retrieve group membership for '{0}' ({1}). {2}" -f
+                    $user.DisplayName,
+                    $user.UserPrincipalName,
+                    $_.Exception.Message
+                )
+            }
+
+            [PSCustomObject]@{
+                DisplayName           = $user.DisplayName
+                UserPrincipalName     = $user.UserPrincipalName
+                AccountEnabled        = $user.AccountEnabled
+                UserType              = $user.UserType
+                DirectGroupCount      = $groupNames.Count
+                DirectGroups          = ($groupNames -join '; ')
+                MembershipQueryStatus = $membershipQueryStatus
+                ReportGeneratedUtc    = $generatedUtc.ToString('o')
+            }
         }
-        catch {
-
-            $membershipQueryStatus = 'ERROR'
-
-            Write-Warning (
-                "Unable to retrieve group membership for '{0}' ({1}). {2}" -f
-                $user.DisplayName,
-                $user.UserPrincipalName,
-                $_.Exception.Message
-            )
-        }
-
-        [PSCustomObject]@{
-            DisplayName            = $user.DisplayName
-            UserPrincipalName      = $user.UserPrincipalName
-            AccountEnabled         = $user.AccountEnabled
-            UserType               = $user.UserType
-            DirectGroupCount       = $groupNames.Count
-            DirectGroups           = ($groupNames -join '; ')
-            MembershipQueryStatus  = $membershipQueryStatus
-            ReportGeneratedUtc     = $generatedUtc.ToString('o')
-        }
-    }
+    )
 
     $timestamp = $generatedUtc.ToString(
         "yyyyMMdd-HHmmss'Z'"
@@ -225,23 +234,28 @@ Connected tenant: $($context.TenantId)
     # Check whether any group-membership queries failed.
 
     $failedMemberships = @(
-        $report | Where-Object {
-            $_.MembershipQueryStatus -eq 'ERROR'
-        }
+        $report |
+            Where-Object {
+                $_.MembershipQueryStatus -eq 'ERROR'
+            }
     )
 
     if ($failedMemberships.Count -gt 0) {
+
         Write-Warning (
             "Report exported, but {0} user membership queries failed. Review the CSV." -f
             $failedMemberships.Count
         )
-    
-        $completionMessage = 'Report generation completed with membership-query warnings.'
+
+        $completionMessage =
+            'Report generation completed with membership-query warnings.'
     }
     else {
-        $completionMessage = 'Report generation completed successfully.'
+
+        $completionMessage =
+            'Report generation completed successfully.'
     }
-    
+
     Write-Host ''
     Write-Host $completionMessage
     Write-Host "Users processed: $($report.Count)"
