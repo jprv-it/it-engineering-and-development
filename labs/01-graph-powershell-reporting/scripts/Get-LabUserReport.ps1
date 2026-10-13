@@ -69,12 +69,13 @@ try {
 
         if (-not (Get-Module -ListAvailable -Name $moduleName)) {
             throw @"
-Required PowerShell module '$moduleName' is not installed.
-
-Install the Microsoft Graph PowerShell SDK with:
-
-Install-Module Microsoft.Graph -Scope CurrentUser -Repository PSGallery -Force
-"@
+        Required PowerShell module '$moduleName' is not installed.
+        
+        Install the required Microsoft Graph PowerShell modules with:
+        
+        Install-Module Microsoft.Graph.Authentication -Scope CurrentUser -Repository PSGallery
+        Install-Module Microsoft.Graph.Users -Scope CurrentUser -Repository PSGallery
+        "@
         }
     }
 
@@ -256,11 +257,7 @@ Connected tenant: $($context.TenantId)
             MembershipQueryStatus `
             -AutoSize
 }
-catch {
 
-    Write-Error "Lab 01 failed: $($_.Exception.Message)"
-    throw
-}
 finally {
 
     if ($graphConnected) {
