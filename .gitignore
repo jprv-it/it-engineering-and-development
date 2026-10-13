@@ -1,14 +1,13 @@
+
 # ---------------------------------------------------------------------------
 # Lab-generated reports
 # ---------------------------------------------------------------------------
 
-labs/01-graph-powershell-reporting/output/
+# Default output directory used by Get-LabUserReport.ps1
+labs/01-graph-powershell-reporting/scripts/output/
 
-# ---------------------------------------------------------------------------
-# The lab can generate real CSV reports under output/ that might potentially contain tenant-specific information such as UPNs.
-#
-# Git will then automatically treat that directory as ignored rather than presenting those generated reports for commit.
-# ---------------------------------------------------------------------------
+# Alternative lab-root output directory
+labs/01-graph-powershell-reporting/output/
 
 # ---------------------------------------------------------------------------
 # Local environment / secrets
