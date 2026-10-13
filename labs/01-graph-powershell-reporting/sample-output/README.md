@@ -1,4 +1,4 @@
-This file is illustrative and not evidence of an actual execution.
+This CSV file is illustrative and is not evidence of an actual execution.
 
 It is kept separate from the real reporting screenshots and only contains synthetic data.
 
