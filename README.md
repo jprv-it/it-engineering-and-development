@@ -88,18 +88,35 @@ Planned projects are not represented as completed implementations.
 
 ```text
 it-engineering-and-development/
+├── .gitignore
+├── LICENSE
 ├── README.md
 ├── SECURITY.md
-├── .gitignore
 └── labs/
-    └── lab-01/
+    └── 01-graph-powershell-reporting/
         ├── README.md
-        ├── implementation-guide.md
-        ├── troubleshooting.md
         ├── lessons-learned.md
-        ├── scripts/
-        │   └── Get-LabUserReport.ps1
-        └── evidence/
+        ├── permissions.md
+        ├── test-cases.md
+        ├── troubleshooting.md
+        │
+        ├── evidence/
+        │   └── screenshots/
+        │       ├── .gitkeep
+        │       ├── 01-script-execution-success.png
+        │       ├── 02-graph-authentication.png
+        │       ├── 03-report-terminal-output.png
+        │       ├── 04-import-csv.png
+        │       ├── 05-csv-report-validation.png
+        │       ├── 06-entra-source-validation.png
+        │       └── 07-invalid-tenant-id-test.png
+        │
+        ├── sample-output/
+        │   └── .gitkeep
+        │
+        └── scripts/
+            ├── .gitkeep
+            └── Get-LabUserReport.ps1
 ```
 
 The structure will evolve as additional laboratories and software projects are introduced.
