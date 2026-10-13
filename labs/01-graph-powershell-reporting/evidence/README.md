@@ -11,13 +11,15 @@ Screenshots are located in the `screenshots/` subdirectory.
 
 | ID | Screenshot | Description |
 |---|---|---|
-| EV-01 | [Script Execution Success](screenshots/01-script-execution-success.png) | Successful execution of the PowerShell reporting script |
-| EV-02 | [Graph Authentication](screenshots/02-graph-authentication.png) | Microsoft Graph authentication evidence |
-| EV-03 | [Report Terminal Output](screenshots/03-report-terminal-output.png) | Terminal output produced by the reporting process |
-| EV-04 | [Import-Csv](screenshots/04-import-csv.png) | Importing the generated CSV into PowerShell |
-| EV-05 | [CSV Report Validation](screenshots/05-csv-report-validation.png) | Inspection and validation of generated report data |
-| EV-06 | [Entra Source Validation](screenshots/06-entra-source-validation.png) | Comparison of reported membership information against the source environment |
-| EV-07 | [Invalid Tenant ID Test](screenshots/07-invalid-tenant-id-test.png) | Controlled negative test demonstrating parameter validation |
+| EV-01 | [Script Invocation](screenshots/01-script-execution-success.png) | Initial PowerShell script invocation, module loading and start of execution |
+| EV-02 | [Graph Authentication](screenshots/02-graph-authentication.png) | Microsoft Graph device-code authentication and successful continuation |
+| EV-03 | [Successful Report Completion](screenshots/03-report-terminal-output.png) | Successful report completion, eight users processed and terminal output |
+| EV-04 | [Import-Csv Validation](screenshots/04-import-csv.png) | PowerShell import and inspection of the generated CSV |
+| EV-05 | [CSV Report Validation](screenshots/05-csv-report-validation.png) | Eight report records, exported columns and group membership data |
+| EV-06 | [Entra User Source Validation](screenshots/06-entra-source-validation.png) | Microsoft Entra user-list comparison for identity, user type and account status |
+| EV-07 | [Invalid Tenant ID Test](screenshots/07-invalid-tenant-id-test.png) | Controlled negative test demonstrating rejection of malformed GUID input |
+| EV-08 | [Group A Membership Validation](screenshots/08-group-a-members.png) | Direct members of LAB-GRAPH-REPORTING-A: Lab Graph 02 and Lab Graph 03 |
+| EV-09 | [Group B Membership Validation](screenshots/09-group-b-members.png) | Direct members of LAB-GRAPH-REPORTING-B: Lab Graph 03 and Lab Graph 04 |
 
 ## Testing and Validation
 
