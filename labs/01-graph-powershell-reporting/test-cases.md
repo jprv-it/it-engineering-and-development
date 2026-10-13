@@ -73,6 +73,16 @@ The validated report included eight user records, of which four were specificall
 - `evidence/screenshots/01-script-execution-success.png` — initial script invocation.
 - `evidence/screenshots/03-report-terminal-output.png` — successful completion and report results.
 
+**Final script revision retest:**
+
+- Date: 13 October 2026
+- Version: Latest published Get-LabUserReport.ps1
+- Outcome: PASS
+- Users returned: 8
+- Expected CSV columns: 8 of 8
+- Membership query errors: 0
+- Notes: Retested after the script's error-handling and module-guidance corrections.
+
 ### TC-03 — Microsoft Graph Authentication
 
 **Objective:** Confirm that Microsoft Graph authentication succeeds.
