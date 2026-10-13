@@ -88,6 +88,8 @@ These scopes support user reporting and group membership retrieval.
 
 The script does not perform user creation, deletion or group membership changes.
 
+Both requested Microsoft Graph delegated scopes require administrator consent. Ensure the required consent has been granted before executing the script.
+
 For additional details, see [Permissions](permissions.md).
 
 ## 7. Prepare the Script
