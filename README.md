@@ -56,7 +56,7 @@ Develop a reusable PowerShell reporting solution that connects to Microsoft Grap
 - Technical documentation
 - Security and privacy considerations
 
-**Project location:** [Lab 01](labs/lab-01/)
+**Project location:** [Lab 01 — PowerShell and Microsoft Graph User Reporting](labs/01-graph-powershell-reporting/)
 
 ## Planned Development Areas
 
@@ -95,14 +95,14 @@ it-engineering-and-development/
 └── labs/
     └── 01-graph-powershell-reporting/
         ├── README.md
+        ├── implementation-guide.md
         ├── lessons-learned.md
         ├── permissions.md
         ├── test-cases.md
         ├── troubleshooting.md
-        │
         ├── evidence/
+        │   ├── README.md
         │   └── screenshots/
-        │       ├── .gitkeep
         │       ├── 01-script-execution-success.png
         │       ├── 02-graph-authentication.png
         │       ├── 03-report-terminal-output.png
@@ -110,10 +110,8 @@ it-engineering-and-development/
         │       ├── 05-csv-report-validation.png
         │       ├── 06-entra-source-validation.png
         │       └── 07-invalid-tenant-id-test.png
-        │
         ├── sample-output/
         │   └── .gitkeep
-        │
         └── scripts/
             ├── .gitkeep
             └── Get-LabUserReport.ps1
