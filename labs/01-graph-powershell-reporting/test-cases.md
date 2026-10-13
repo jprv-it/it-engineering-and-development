@@ -68,7 +68,10 @@ The validated report included eight user records, of which four were specificall
 
 **Status:** PASS
 
-**Evidence:** `evidence/screenshots/01-script-execution-success.png`
+**Evidence:**
+
+- `evidence/screenshots/01-script-execution-success.png` — initial script invocation.
+- `evidence/screenshots/03-report-terminal-output.png` — successful completion and report results.
 
 ### TC-03 — Microsoft Graph Authentication
 
@@ -134,9 +137,15 @@ The validated report included eight user records, of which four were specificall
 
 An additional membership associated with the existing organisation-wide `Modern Workplace Lab` Team explained the unexpected group count for relevant users.
 
-**Status:** PASS for checked records.
+**Status:** PASS for checked user records and the two lab-group membership comparisons.
 
-**Evidence:** `evidence/screenshots/06-entra-source-validation.png`
+**Evidence:**
+
+- `evidence/screenshots/06-entra-source-validation.png` — user identity, user type and account-status source comparison.
+- `evidence/screenshots/08-group-a-members.png` — direct members of LAB-GRAPH-REPORTING-A.
+- `evidence/screenshots/09-group-b-members.png` — direct members of LAB-GRAPH-REPORTING-B.
+
+The group screenshots validate the memberships of the two purpose-created laboratory groups. They do not constitute an exhaustive validation of every group membership in the tenant.
 
 ### TC-06 — Invalid Tenant ID Rejection
 
