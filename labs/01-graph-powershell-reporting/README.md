@@ -278,25 +278,31 @@ The script implements membership-query status reporting, but a controlled failur
 
 ## 11. Evidence
 
-The evidence index is available in:
+The Lab 01 evidence register is available here:
 
-[Lab 01 Evidence](evidence/README.md)
+[Evidence Index](evidence/README.md)
 
-The seven screenshots are stored in:
+Nine screenshots are stored in:
 
 `evidence/screenshots/`
 
-The evidence includes:
+The evidence covers:
 
-1. Successful script execution.
+1. Initial PowerShell script invocation.
 2. Microsoft Graph authentication.
-3. Terminal report output.
-4. CSV import using PowerShell.
-5. CSV report validation.
-6. Microsoft Entra source verification.
+3. Successful report completion.
+4. PowerShell CSV import.
+5. CSV report structure and results.
+6. Microsoft Entra user-list validation.
 7. Invalid Tenant ID rejection.
+8. Group A direct membership verification.
+9. Group B direct membership verification.
 
-Screenshots are included to document testing and validation. Any sensitive information must be removed or redacted before publication.
+The two lab-group screenshots support validation of the group memberships returned by the reporting solution.
+
+Screenshots must be reviewed and sanitised before public publication.
+
+The script's controlled membership-query failure scenario remains untested. Refer to [Test Cases](test-cases.md) for the detailed validation status.
 
 ## 12. Security and Privacy Considerations
 
