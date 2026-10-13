@@ -30,7 +30,7 @@ This repository will expand as additional projects are implemented and validated
 
 ### Lab 01 — PowerShell and Microsoft Graph User Reporting
 
-**Status:** Functional script validated; portfolio documentation and evidence publication in progress.
+**Status:** Complete — core reporting functionality validated; technical documentation, troubleshooting records, test results and sanitised evidence published. Additional resilience testing and automation remain future improvements.
 
 **Technologies:**
 - PowerShell 7
