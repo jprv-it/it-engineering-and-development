@@ -234,10 +234,15 @@ Connected tenant: $($context.TenantId)
             "Report exported, but {0} user membership queries failed. Review the CSV." -f
             $failedMemberships.Count
         )
+    
+        $completionMessage = 'Report generation completed with membership-query warnings.'
     }
-
+    else {
+        $completionMessage = 'Report generation completed successfully.'
+    }
+    
     Write-Host ''
-    Write-Host 'Report generation completed successfully.'
+    Write-Host $completionMessage
     Write-Host "Users processed: $($report.Count)"
     Write-Host "Output file:     $outputPath"
     Write-Host ''
