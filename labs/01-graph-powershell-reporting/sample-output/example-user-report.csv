@@ -1,1 +1,6 @@
 
+DisplayName,UserPrincipalName,AccountEnabled,UserType,DirectGroupCount,DirectGroups,MembershipQueryStatus,ReportGeneratedUtc
+Demo User 01,demo.user01@example.invalid,True,Member,0,,OK,2026-10-13T12:00:00.0000000Z
+Demo User 02,demo.user02@example.invalid,True,Member,1,LAB-DEMO-GROUP-A,OK,2026-10-13T12:00:00.0000000Z
+Demo User 03,demo.user03@example.invalid,True,Member,2,LAB-DEMO-GROUP-A; LAB-DEMO-GROUP-B,OK,2026-10-13T12:00:00.0000000Z
+Demo User 04,demo.user04@example.invalid,False,Member,1,LAB-DEMO-GROUP-B,OK,2026-10-13T12:00:00.0000000Z
