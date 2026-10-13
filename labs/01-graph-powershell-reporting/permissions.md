@@ -43,13 +43,20 @@ However, read access can still expose sensitive identity and organisational info
 
 ## 4. Consent Requirements
 
-The requested permissions require appropriate consent.
+Both delegated permissions used by this script require administrator consent:
 
-Administrator consent may be required depending on the permission and tenant configuration.
+- `User.Read.All`
+- `GroupMember.Read.All`
 
-The account must also be authorised to access the requested directory information.
+An appropriately authorised administrator must grant the required consent unless it has already been granted to the Microsoft Graph PowerShell application in the tenant.
 
-Authentication success does not automatically guarantee that every directory query will succeed.
+The authenticated user's applicable directory access restrictions still apply.
+
+A successful interactive sign-in does not by itself prove that every directory operation will succeed.
+
+The script validates that the requested scopes appear in the Microsoft Graph authentication context before retrieving directory information.
+
+This validation confirms the presence of the delegated scopes in the active context, but does not replace testing the actual directory operations.
 
 ## 5. Authentication Context Validation
 
