@@ -109,7 +109,9 @@ it-engineering-and-development/
         │       ├── 04-import-csv.png
         │       ├── 05-csv-report-validation.png
         │       ├── 06-entra-source-validation.png
-        │       └── 07-invalid-tenant-id-test.png
+        │       ├── 07-invalid-tenant-id-test.png
+        │       ├── 08-group-a-members.png
+        │       └── 09-group-b-members.png
         ├── sample-output/
         │   └── .gitkeep
         └── scripts/
