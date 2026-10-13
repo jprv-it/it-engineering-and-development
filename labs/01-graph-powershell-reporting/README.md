@@ -88,7 +88,7 @@ For this lab, the script uses Microsoft Graph delegated permissions:
 - `User.Read.All`
 - `GroupMember.Read.All`
 
-Consent to these permissions may require administrator approval, depending on tenant policy.
+Both User.Read.All and GroupMember.Read.All require administrator consent. An appropriately authorised administrator must grant consent unless the required consent has already been granted for the Microsoft Graph PowerShell application in the tenant.
 
 ## 6. Script File
 
