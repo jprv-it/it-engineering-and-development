@@ -141,17 +141,32 @@ In the current implementation, this is the `output` directory associated with th
 
 ## 8. Example Execution
 
-Open PowerShell 7 and navigate to the folder containing the script.
+Open PowerShell 7.
 
-For example:
+Navigate to the directory containing the script:
 
 ```powershell
-Set-Location "C:\Users\jprva\"
+Set-Location "<FULL-PATH-TO-REPOSITORY>\labs\01-graph-powershell-reporting\scripts"
 ```
 
-From here, navigate to the actual directory containing `Get-LabUserReport.ps1`, or invoke the script using its full path.
+Replace `<FULL-PATH-TO-REPOSITORY>` with the location where the repository is stored on your computer.
 
-Example command:
+If you have not cloned the GitHub repository, use the directory where you saved `Get-LabUserReport.ps1` instead.
+
+Run the script using:
+
+```powershell
+.\Get-LabUserReport.ps1 `
+    -TenantId "<YOUR-TENANT-GUID>"
+```
+
+Replace `<YOUR-TENANT-GUID>` with the GUID of your Microsoft Entra tenant.
+
+The script uses Microsoft Graph device-code authentication. Follow the displayed instructions and sign in with an authorised lab account.
+
+By default, the generated report is saved to an `output` directory beneath the directory containing the script.
+
+To specify an alternative output location:
 
 ```powershell
 .\Get-LabUserReport.ps1 `
@@ -159,13 +174,9 @@ Example command:
     -OutputDirectory ".\output"
 ```
 
-Replace `<YOUR-TENANT-GUID>` with the real tenant GUID.
+When `-OutputDirectory` is supplied as a relative path, it is resolved relative to the current PowerShell working directory.
 
-If the current directory does not contain the script, replace the relative script path with its actual location.
-
-The script initiates Microsoft Graph device-code authentication. Follow the authentication instructions and sign in with the authorised account.
-
-Do not include authentication codes in screenshots or public documentation.
+Do not include authentication codes, access tokens or other sensitive information in screenshots or public documentation.
 
 ## 9. Expected Output
 
@@ -267,22 +278,25 @@ The script implements membership-query status reporting, but a controlled failur
 
 ## 11. Evidence
 
-Screenshots and validation evidence are located in:
+The evidence index is available in:
 
-```text
-evidence/
-```
+[Lab 01 Evidence](evidence/README.md)
 
-Recommended evidence includes:
+The seven screenshots are stored in:
 
-- Successful script execution
-- Successful Microsoft Graph authentication
-- Terminal report output
-- Generated CSV validation
-- Microsoft Entra source verification
-- Invalid Tenant ID rejection
+`evidence/screenshots/`
 
-Only screenshots reviewed for sensitive information should be published.
+The evidence includes:
+
+1. Successful script execution.
+2. Microsoft Graph authentication.
+3. Terminal report output.
+4. CSV import using PowerShell.
+5. CSV report validation.
+6. Microsoft Entra source verification.
+7. Invalid Tenant ID rejection.
+
+Screenshots are included to document testing and validation. Any sensitive information must be removed or redacted before publication.
 
 ## 12. Security and Privacy Considerations
 
