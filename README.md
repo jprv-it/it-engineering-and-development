@@ -30,7 +30,7 @@ This repository will expand as additional projects are implemented and validated
 
 ### Lab 01 — PowerShell and Microsoft Graph User Reporting
 
-**Status:** Complete — core reporting functionality validated; technical documentation, troubleshooting records, test results and sanitised evidence published. Additional resilience testing and automation remain future improvements.
+**Status:** Complete — core reporting functionality validated. A final-script retest is recorded in the Lab 01 test cases. Documentation and reviewed evidence are included. Controlled membership-query failure testing (TC-07) remains NOT TESTED.
 
 **Technologies:**
 - PowerShell 7
@@ -103,6 +103,7 @@ it-engineering-and-development/
         ├── evidence/
         │   ├── README.md
         │   └── screenshots/
+        │       ├── .gitkeep
         │       ├── 01-script-execution-success.png
         │       ├── 02-graph-authentication.png
         │       ├── 03-report-terminal-output.png
@@ -113,7 +114,9 @@ it-engineering-and-development/
         │       ├── 08-group-a-members.png
         │       └── 09-group-b-members.png
         ├── sample-output/
-        │   └── .gitkeep
+        │   ├── .gitkeep
+        │   ├── README.md
+        │   └── example-user-report.csv
         └── scripts/
             ├── .gitkeep
             └── Get-LabUserReport.ps1
