@@ -187,7 +187,7 @@ Possible future enhancements include:
 
 - Automated testing using Pester.
 - A controlled test of failed group membership retrieval.
-- A sanitised sample CSV containing synthetic identities.
+- Additional synthetic CSV examples demonstrating membership-query errors and other reporting edge cases.
 - Configurable selection of users or groups.
 - Additional report formats or automated validation checks.
 - Better separation of reusable functions from the main script.
