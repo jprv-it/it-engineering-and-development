@@ -302,7 +302,7 @@ The evidence covers:
 
 The two lab-group screenshots support validation of the group memberships returned by the reporting solution.
 
-The published evidence screenshots have been reviewed and sanitised to remove authentication information, privileged account identities and unnecessary directory details.
+The evidence screenshots document the recorded laboratory execution and validation activities. They are indexed for traceability, while the publicly reusable CSV example contains synthetic data rather than an actual tenant export.
 
 The script's controlled membership-query failure scenario remains untested. Refer to [Test Cases](test-cases.md) for the detailed validation status.
 
