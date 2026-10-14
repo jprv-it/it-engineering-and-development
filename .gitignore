@@ -8,6 +8,8 @@ labs/01-graph-powershell-reporting/scripts/output/
 
 # Alternative lab-root output directory
 labs/01-graph-powershell-reporting/output/
+# Ignore timestamped reports even when a custom output directory is used.
+lab-user-report-*.csv
 
 # ---------------------------------------------------------------------------
 # Local environment / secrets
