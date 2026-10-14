@@ -40,7 +40,7 @@ Refer to [Test Cases](../test-cases.md) for the recorded outcomes and remaining 
 
 ## Security and Privacy
 
-The screenshots in this register have been reviewed and sanitised for public viewing. Authentication details, sensitive account identities and unnecessary tenant identifiers have been obscured. Lab-specific demonstration information has been retained where necessary to support the documented test results.
+The screenshots are retained as evidence of the recorded laboratory execution, troubleshooting and validation activities. Actual tenant-generated CSV reports are not included in this repository. A separate synthetic CSV is provided for examining the report structure without requiring access to the laboratory tenant.
 
 Raw tenant-generated CSV reports are not intended for inclusion in the public repository.
 
