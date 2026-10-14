@@ -196,7 +196,7 @@ The generated CSV includes these columns:
 | `UserPrincipalName` | User principal name |
 | `AccountEnabled` | Whether the account is enabled |
 | `UserType` | Microsoft Entra user classification |
-| `DirectGroupCount` | Number of directly associated groups returned |
+| `DirectGroupCount` | Number of returned direct groups with a non-empty display name included in the report |
 | `DirectGroups` | Names of the returned direct groups |
 | `MembershipQueryStatus` | Status of the group membership query |
 | `ReportGeneratedUtc` | UTC timestamp associated with report generation |
