@@ -191,6 +191,8 @@ Group names are combined into a semicolon-separated string for the CSV.
 
 This is direct group membership reporting, not transitive membership analysis.
 
+The DirectGroupCount field counts the direct groups whose display names are included in the report. Group objects returned without a usable display name are omitted from the reported list and count. A future enhancement could explicitly detect and report such omissions.
+
 ## 13. Membership Query Error Handling
 
 For each user, the script attempts the membership query within a `try/catch` block.
