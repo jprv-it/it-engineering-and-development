@@ -21,6 +21,8 @@ Screenshots are located in the `screenshots/` subdirectory.
 | EV-08 | [Group A Membership Validation](screenshots/08-group-a-members.png) | Direct members of LAB-GRAPH-REPORTING-A: Lab Graph 02 and Lab Graph 03 |
 | EV-09 | [Group B Membership Validation](screenshots/09-group-b-members.png) | Direct members of LAB-GRAPH-REPORTING-B: Lab Graph 03 and Lab Graph 04 |
 
+EV-01, EV-02 and EV-03 document different phases of the same successful PowerShell execution. They are purpose-specific extracts of one execution session and do not represent three independent script runs.
+
 ## Testing and Validation
 
 The evidence supports the documented tests covering:
@@ -38,7 +40,7 @@ Refer to [Test Cases](../test-cases.md) for the recorded outcomes and remaining 
 
 ## Security and Privacy
 
-Screenshots should be reviewed for sensitive information before public publication.
+The screenshots in this register have been reviewed and sanitised for public viewing. Authentication details, sensitive account identities and unnecessary tenant identifiers have been obscured. Lab-specific demonstration information has been retained where necessary to support the documented test results.
 
 Raw tenant-generated CSV reports are not intended for inclusion in the public repository.
 
