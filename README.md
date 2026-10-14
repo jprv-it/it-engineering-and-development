@@ -145,7 +145,7 @@ Projects are primarily performed in controlled personal learning environments.
 
 The Microsoft 365 and Entra ID laboratory is identified as **IT Engineering Lab**.
 
-Environment-specific identifiers, credentials and sensitive information are not required to reproduce the published examples and should not be included in public artefacts.
+The laboratory tenant's domain is included for technical context. Credentials, authentication material and sensitive tenant-specific configuration details are not required to reproduce the published examples and must not be included in public artefacts.
 
 Any published sample data should be synthetic or appropriately sanitised.
 
