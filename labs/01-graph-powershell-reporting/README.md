@@ -201,6 +201,8 @@ The generated CSV includes these columns:
 | `MembershipQueryStatus` | Status of the group membership query |
 | `ReportGeneratedUtc` | UTC timestamp associated with report generation |
 
+A synthetic example of the eight-column report is available in [Sample CSV](sample-output/example-user-report.csv), with supporting notes in the [Sample Output README](sample-output/README.md). This example is illustrative and does not contain actual directory exports.
+
 The report is generated from the tenant's current state.
 
 User counts and membership counts may change as tenant configuration changes.
@@ -300,7 +302,7 @@ The evidence covers:
 
 The two lab-group screenshots support validation of the group memberships returned by the reporting solution.
 
-Screenshots must be reviewed and sanitised before public publication.
+The published evidence screenshots have been reviewed and sanitised to remove authentication information, privileged account identities and unnecessary directory details.
 
 The script's controlled membership-query failure scenario remains untested. Refer to [Test Cases](test-cases.md) for the detailed validation status.
 
@@ -379,7 +381,7 @@ Potential improvements include:
 
 - Automated Pester tests
 - Failure-injection testing
-- Synthetic sample reports
+- Additional synthetic sample reports illustrating membership-query failures and other edge cases
 - Configurable reporting filters
 - PowerShell static analysis
 - Automated test execution through GitHub Actions
