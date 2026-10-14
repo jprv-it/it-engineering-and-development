@@ -23,6 +23,8 @@ Screenshots are located in the `screenshots/` subdirectory.
 
 EV-01, EV-02 and EV-03 document different phases of the same successful PowerShell execution. They are purpose-specific extracts of one execution session and do not represent three independent script runs.
 
+The execution screenshots show a timestamp-named working copy of the reporting script used during laboratory development. A subsequent final-script revision retest is documented separately in [Test Cases](../test-cases.md). The screenshots should not be interpreted as independent visual evidence of that subsequent retest.
+
 ## Testing and Validation
 
 The evidence supports the documented tests covering:
