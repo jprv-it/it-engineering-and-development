@@ -1,6 +1,6 @@
 # Lab 02 — Pilot change record
 
-**Current state:** Planned, no changes executed by this starter kit.
+**Current state:** IN PROGRESS
 
 | Change ID | Phase | Proposed change | Scope | Risk / rollback | Date started | Date completed | Status |
 |---|---|---|---|---|---|---|---|
