@@ -1,6 +1,8 @@
 # Lab 02 — End-to-end implementation guide
 
-**Status:** Instructions only; no steps are marked completed. Enter actual observations in the Phase 1 results table below, and enter corresponding summary test outcomes in `test-cases.md`. Do not mark unperformed checks PASS.
+**Status:** IN PROGRESS
+
+(Instructions only; no steps are marked completed. Enter actual observations in the Phase 1 results table below, and enter corresponding summary test outcomes in `test-cases.md`. Do not mark unperformed checks PASS.)
 
 ## Phase 0 — Change-control and safe scope
 1. Retain Lab 01 unchanged. Create the new `labs/02-intune-endpoint-engineering/` folder. Do not publish `build/`, `.intunewin`, installer binaries, tokens or raw Intune diagnostic ZIPs.
