@@ -18,7 +18,7 @@
 8. Record Windows build precisely using `cmd /c ver`; record time sync (`w32tm /query /status`), disk space (`Get-PSDrive C`) and PowerShell version (`$PSVersionTable.PSVersion`). Review Intune *device platform* enrollment restrictions (including ownership, Windows platform and OS constraints), *device limits*, and Entra device joining limits; no change until justified. Do not invent values in the published preflight table.
 
 
-### Phase 1 — Actual prerequisite observations (FILL IN AS YOU WORK)
+### Phase 1 — Actual prerequisite observations (FILL IN AS YOU PROGRESS)
 
 **How to use this table:** Replace `NOT TESTED` only after performing the check. For each row enter the observed result, check date (YYYY-MM-DD), and any redacted evidence reference or relevant warning. `PASS` means the required condition was actually verified; `BLOCKED` means you cannot complete the check; `FAIL` means the verified condition is not met. Do not enter account secrets, serial numbers, tenant GUIDs, licence keys, or raw diagnostic logs in this public file. If VM provisioning is not yet completed, `PENDING` is acceptable here but keep corresponding test cases `NOT TESTED`.
 
