@@ -11,6 +11,16 @@ labs/01-graph-powershell-reporting/output/
 # Ignore timestamped reports even when a custom output directory is used.
 lab-user-report-*.csv
 
+# Lab 02 — locally generated packages, binaries and raw diagnostic outputs
+*.intunewin
+labs/02-intune-endpoint-engineering/build/
+labs/02-intune-endpoint-engineering/output/
+labs/02-intune-endpoint-engineering/**/*.msi
+labs/02-intune-endpoint-engineering/**/*.exe
+labs/02-intune-endpoint-engineering/**/*.log
+labs/02-intune-endpoint-engineering/**/*.etl
+labs/02-intune-endpoint-engineering/**/*.diagcab
+
 # ---------------------------------------------------------------------------
 # Local environment / secrets
 # ---------------------------------------------------------------------------
