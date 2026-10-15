@@ -58,6 +58,20 @@ Develop a reusable PowerShell reporting solution that connects to Microsoft Grap
 
 **Project location:** [Lab 01 — PowerShell and Microsoft Graph User Reporting](labs/01-graph-powershell-reporting/)
 
+### Lab 02 — Intune Endpoint Engineering and Application Lifecycle
+
+**Status:** In development — not yet validated.
+
+**Technologies:** Microsoft Intune, Microsoft Entra ID, Windows 11, PowerShell, Win32 packaging, endpoint policy and compliance, Microsoft Win32 Content Prep Tool.
+
+**Objective:** Demonstrate safe pilot endpoint enrolment, Windows policy management, Win32 application deployment, versioned supersedence, detection-rule troubleshooting, managed uninstall and structured test evidence in a controlled non-production tenant.
+
+**Demonstrated capabilities:**
+- Capability 1
+- Capability 2
+
+**Project location:** [Lab 02 — Intune Endpoint Engineering and Application Lifecycle](labs/02-intune-endpoint-engineering/)
+
 ## Planned Development Areas
 
 Future projects may address:
@@ -94,32 +108,66 @@ it-engineering-and-development/
 ├── SECURITY.md
 └── labs/
     └── 01-graph-powershell-reporting/
-        ├── README.md
-        ├── implementation-guide.md
-        ├── lessons-learned.md
-        ├── permissions.md
-        ├── test-cases.md
-        ├── troubleshooting.md
-        ├── evidence/
-        │   ├── README.md
-        │   └── screenshots/
-        │       ├── .gitkeep
-        │       ├── 01-script-execution-success.png
-        │       ├── 02-graph-authentication.png
-        │       ├── 03-report-terminal-output.png
-        │       ├── 04-import-csv.png
-        │       ├── 05-csv-report-validation.png
-        │       ├── 06-entra-source-validation.png
-        │       ├── 07-invalid-tenant-id-test.png
-        │       ├── 08-group-a-members.png
-        │       └── 09-group-b-members.png
-        ├── sample-output/
-        │   ├── .gitkeep
-        │   ├── README.md
-        │   └── example-user-report.csv
-        └── scripts/
-            ├── .gitkeep
-            └── Get-LabUserReport.ps1
+    │   ├── README.md
+    │   ├── implementation-guide.md
+    │   ├── lessons-learned.md
+    │   ├── permissions.md
+    │   ├── test-cases.md
+    │   ├── troubleshooting.md
+    │   ├── evidence/
+    │   │   ├── README.md
+    │   │   └── screenshots/
+    │   │       ├── .gitkeep
+    │   │       ├── 01-script-execution-success.png
+    │   │       ├── 02-graph-authentication.png
+    │   │       ├── 03-report-terminal-output.png
+    │   │       ├── 04-import-csv.png
+    │   │       ├── 05-csv-report-validation.png
+    │   │       ├── 06-entra-source-validation.png
+    │   │       ├── 07-invalid-tenant-id-test.png
+    │   │       ├── 08-group-a-members.png
+    │   │       └── 09-group-b-members.png
+    │   ├── sample-output/
+    │   │   ├── .gitkeep
+    │   │   ├── README.md
+    │   │   └── example-user-report.csv
+    │   └── scripts/
+    │       ├── .gitkeep
+    │       └── Get-LabUserReport.ps1
+    └── 02-intune-endpoint-engineering/
+    │   ├── README.md
+    │   ├── change-record.md
+    │   ├── implementation-guide.md
+    │   ├── lessons-learned.md
+    │   ├── permissions.md
+    │   ├── test-cases.md
+    │   ├── troubleshooting.md
+    │   ├── evidence/
+    │   │   ├── .gitkeep
+    │   │   └── screenshots/
+    │   │       ├── .gitkeep
+    │   │       ├── 01-.png
+    │   │       ├── 02-.png
+    │   │       ├── 03-.png
+    │   │       ├── 04-.png
+    │   │       ├── 05-.png
+    │   │       ├── 06-.png
+    │   │       ├── 07-.png
+    │   │       ├── 08-.png
+    │   │       └── 09-.png
+    │   ├── app-source/
+    │   │   ├── .gitkeep
+    │   │   ├── .gitkeep
+    │   │   └── .gitkeep
+    │   └── scripts/
+    │       ├── .gitkeep
+    │       └── .gitkeep
+    └── 03-/
+    └── 04-/
+    └── 05-/
+    └── 06-/
+    └── 07-/
+    └── 08-/
 ```
 
 The structure will evolve as additional laboratories and software projects are introduced.
