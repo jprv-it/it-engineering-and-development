@@ -4,7 +4,7 @@
 
 | Change ID | Phase | Proposed change | Scope | Risk / rollback | Date started | Date completed | Status |
 |---|---|---|---|---|---|---|---|
-| CH-00 | Documentation | Establish Lab 02 repository structure and prerequisite register | Public portfolio documentation | Low; revert GitHub commit if necessary | YYYY-MM-DD | YYYY-MM-DD | IN PROGRESS |
+| CH-00 | Documentation | Establish Lab 02 repository structure and prerequisite register | Public portfolio documentation | Low; revert GitHub commit if necessary | 2026-10-15 | YYYY-MM-DD | IN PROGRESS |
 | CH-01 | Identity | Create licensed pilot and static groups | Lab-only | Remove group assignment; deactivate lab user after use | — | — | PLANNED |
 | CH-02 | Enrollment | Pilot Entra join / automatic Intune MDM | Single VM | Restore pre-join VM snapshot if safe; retire cloud device record appropriately | — | — | PLANNED |
 | CH-03 | Policy | Apply Edge catalog + compliance policies | Pilot device | Unassign lab policy | — | — | PLANNED |
